@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragmentTasks"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TasksFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/tasksList"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/bottomLayout"
+            tools:spanCount="5" />
+
+        <LinearLayout
+            android:id="@+id/bottomLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <EditText
+                android:id="@+id/bottomEditText"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="4dp"
+                android:layout_weight="1"
+                android:background="@color/black"
+                android:backgroundTint="#FFFFFF"
+                android:hint="Task title"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textStyle="bold" />
+
+            <ImageButton
+                android:id="@+id/insertTasks"
+                android:layout_width="100dp"
+                android:layout_height="60dp"
+                android:layout_marginRight="4dp"
+                android:background="@color/black"
+                android:backgroundTint="@color/white"
+                android:src="@drawable/plus_circle_svgrepo_com"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:tint="#1674BF"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

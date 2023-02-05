@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "921148769101",
+    "project_id": "smartplanner-a5e1f",
+    "storage_bucket": "smartplanner-a5e1f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:921148769101:android:55ffaf970e94f7f2552d04",
+        "android_client_info": {
+          "package_name": "com.davorgotal.gotal_smartplanner"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "921148769101-7bip5hvj8r5q98244iq6ampbtkucpi7b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDky5nhbwgonahI3dfU7l_KRDDiWQ8Nyag"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "921148769101-7bip5hvj8r5q98244iq6ampbtkucpi7b.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+    color: #222222;
+    font-family: 'Open Sans', sans-serif;
+    height: 100vh;
+    width: 100%;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.nav {
+    background-color: #222222;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav .container {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+    transition: all 0.3s ease-in-out;
+    z-index: 1;
+}
+
+.nav ul {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+
+.nav a {
+    color: #FFFFFF;
+    padding: 7px 15px;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav.active {
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.nav.active a {
+    color: #000000;
+}
+
+.nav.active .container {
+  padding: 10px 0;
+}
+
+.nav a.current,
+.nav a:hover {
+  color: darkred;
+  font-weight: bold;
+}
+
+.content h2,
+.content h3 {
+    font-size: 150%;
+    margin: 20px 0;
+}
+
+.content p {
+    color: #555555;
+    letter-spacing: 1.2px;
+    line-height: 30px;
+}
+section{
+    padding-bottom: 16px;
+}
+  .containerform{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .containerform:after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: url("../images/nav_bar_image.jpg") no-repeat center;
+    background-size: cover;
+    filter: blur(50px);
+    z-index: -1;
+  }
+  .contact-box{
+    max-width: 850px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0px 0px 19px 5px rgba(0,0,0,0.19);
+  }
+  
+  .left{
+    background: url("../images/nav_bar_image.jpg") no-repeat center;
+    background-size: cover;
+    height: 100%;
+  }
+  
+  .right{
+    padding: 25px 40px;
+  }
+  
+  h2{
+    position: relative;
+    padding: 0 0 10px;
+    margin-bottom: 10px;
+  }
+  
+  h2:after{
+    content: '';
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      transform: translateX(-50%);
+      height: 4px;
+      width: 50px;
+      border-radius: 2px;
+      background-color: darkred;
+  }
+  
+  .field{
+    width: 100%;
+    border: 2px solid rgba(0, 0, 0, 0);
+    outline: none;
+    background-color: rgba(230, 230, 230, 0.6);
+    padding: 0.5rem 1rem;
+    font-size: 1.1rem;
+    margin-bottom: 22px;
+    transition: .3s;
+  }
+  
+  .field:hover{
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+  
+  textarea{
+    min-height: 150px;
+  }
+  
+  .btn{
+    width: 100%;
+    padding: 0.5rem 1rem;
+    background-color: darkred;
+    color: #fff;
+    font-size: 1.1rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: .3s;
+  }
+  
+  .btn:hover{
+      background-color: #27ae60;
+  }
+  
+  .field:focus{
+      border: 2px solid rgba(30,85,250,0.47);
+      background-color: #fff;
+  }
+  
+  @media screen and (max-width: 880px){
+    .contact-box{
+      grid-template-columns: 1fr;
+    }
+    .left{
+      height: 200px;
+    }
+  }
+
+footer{
+    bottom: 0;
+    height: 10vh;
+    text-align: center;
+    align-items: center;
+    padding-top: 3vh;
+    background-color: #222222;
+}
+
+.img-footer{
+    width: 30px;
+    height: 30px;
+}
+footer ul li{
+    display: inline;
+    text-decoration: none;
+    padding: 16px;
+  }
+footer a{
+    text-decoration: none;
+    color: white;
+}
+.footer-text
+{
+    padding-right: 16px;
+    padding-left: 8px;
+}
+
+@media only screen and (max-width: 767px) {
+  .nav {
+    flex-direction: column;
+    text-align: center;
+  }
+  .nav h1 {
+      display: none;
+  }
+  .nav li {
+    margin: 10px 0;
+  }
+  .nav .container{
+      justify-content: space-around;
+  }
+
+  .footer-text {
+      display: none;
+    }
+}

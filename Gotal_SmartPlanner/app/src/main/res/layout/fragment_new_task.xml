@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/newTasksFrameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".NewTaskFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <EditText
+                android:id="@+id/addTaskTitleEd"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:ems="10"
+                android:hint="Task title"
+                android:inputType="textPersonName"
+                android:minHeight="48dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/dateEd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:ems="10"
+                android:focusable="false"
+                android:hint="1.1.2023."
+                android:inputType="date"
+                android:minHeight="48dp"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/addTaskTitleEd" />
+
+            <FrameLayout
+                android:id="@+id/addDateView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/dateEd"
+                tools:visibility="visible">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <DatePicker
+                        android:id="@+id/datePicker"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:calendarViewShown="false"
+                        android:datePickerMode="spinner"
+                        android:visibility="visible"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:visibility="visible" />
+
+                    <com.google.android.material.bottomnavigation.BottomNavigationView
+                        android:id="@+id/AddDateNav"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/datePicker"
+                        app:menu="@menu/date_nav" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </FrameLayout>
+
+            <EditText
+                android:id="@+id/startTime"
+                android:layout_width="152dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:ems="10"
+                android:focusable="false"
+                android:hint="12:00"
+                android:inputType="time"
+                android:minHeight="48dp"
+                android:textAlignment="center"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/addDateView" />
+
+            <EditText
+                android:id="@+id/endTime"
+                android:layout_width="151dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:ems="10"
+                android:focusable="false"
+                android:hint="13:00"
+                android:inputType="time"
+                android:minHeight="48dp"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/addDateView" />
+
+            <FrameLayout
+                android:id="@+id/frameStartEndTime"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/endTime"
+                tools:visibility="visible">
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <FrameLayout
+                        android:id="@+id/AddEndTimeFrame"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:visibility="gone">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/Constraint2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:visibility="visible"
+                            tools:visibility="visible">
+
+                            <TimePicker
+                                android:id="@+id/addEndTimeEd2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:timePickerMode="spinner"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <com.google.android.material.bottomnavigation.BottomNavigationView
+                                android:id="@+id/EndTimeNav"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/addEndTimeEd2"
+                                app:menu="@menu/end_time_nav" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/addStartTimeFrame"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:visibility="gone">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/Constraint"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:visibility="visible"
+                            tools:visibility="visible">
+
+                            <TimePicker
+                                android:id="@+id/addStartTimeEd2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="36dp"
+                                android:timePickerMode="spinner"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.496"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <com.google.android.material.bottomnavigation.BottomNavigationView
+                                android:id="@+id/StartTimeNav"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/addStartTimeEd2"
+                                app:menu="@menu/start_time_nav" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </FrameLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </FrameLayout>
+
+            <EditText
+                android:id="@+id/edAddDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="8dp"
+                android:ems="10"
+                android:hint="Description"
+                android:inputType="textPersonName"
+                android:minHeight="48dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/frameStartEndTime" />
+
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/AddCancleNavigationBar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edAddDescription"
+                app:menu="@menu/bottom_new_task_menu" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</FrameLayout>

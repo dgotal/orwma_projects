@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:title="Save"
+        android:id="@+id/add_end_time"
+        />
+    <item
+        android:title="Cancle"
+        android:id="@+id/cancle_end_time" />
+</menu>
