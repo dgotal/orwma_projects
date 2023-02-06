@@ -5,6 +5,6 @@
         android:id="@+id/add_end_time"
         />
     <item
-        android:title="Cancle"
-        android:id="@+id/cancle_end_time" />
+        android:title="Cancel"
+        android:id="@+id/cancel_end_time" />
 </menu>

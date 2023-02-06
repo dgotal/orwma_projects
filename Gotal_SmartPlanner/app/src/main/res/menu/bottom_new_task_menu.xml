@@ -5,6 +5,6 @@
         android:id="@+id/add_item"
         />
     <item
-        android:title="Cancle"
-        android:id="@+id/cancle_item" />
+        android:title="Cancel"
+        android:id="@+id/cancel_item" />
 </menu>

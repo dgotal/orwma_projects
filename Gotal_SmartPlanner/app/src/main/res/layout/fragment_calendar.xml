@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CalendarFragment">
+    tools:context=".calendar.CalendarFragment">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -42,6 +42,7 @@
 
     <LinearLayout
         android:id="@+id/bottomLayout"
+        android:padding="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
@@ -60,10 +61,11 @@
             android:textAllCaps="true"
             android:textStyle="bold" />
 
-        <ImageButton
+        <ImageView
             android:id="@+id/insertTasks"
-            android:layout_width="100dp"
-            android:layout_height="60dp"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_marginEnd="20dp"
             android:background="@color/black"
             android:backgroundTint="@color/white"
             android:src="@drawable/plus_circle_svgrepo_com"

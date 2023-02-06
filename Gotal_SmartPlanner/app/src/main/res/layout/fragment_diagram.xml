@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DiagramFragment">
+    tools:context=".diagram.DiagramFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -42,6 +42,7 @@
             android:layout_marginEnd="8dp"
             android:lineSpacingExtra="8sp"
             android:text="Quote"
+            android:padding="5dp"
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -49,8 +50,10 @@
 
         <TextView
             android:id="@+id/authorTv"
+            android:paddingEnd="10dp"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
             android:layout_marginEnd="8dp"
             android:text="Author"
             android:textStyle="bold"

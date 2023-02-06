@@ -5,7 +5,7 @@
     android:id="@+id/newTasksFrameLayout"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    tools:context=".NewTaskFragment">
+    tools:context=".task.NewTaskFragment">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -17,7 +17,7 @@
 
 
             <EditText
-                android:id="@+id/addTaskTitleEd"
+                android:id="@+id/etTaskTitle"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -33,7 +33,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <EditText
-                android:id="@+id/dateEd"
+                android:id="@+id/etDate"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -46,7 +46,7 @@
                 android:textAlignment="center"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/addTaskTitleEd" />
+                app:layout_constraintTop_toBottomOf="@+id/etTaskTitle" />
 
             <FrameLayout
                 android:id="@+id/addDateView"
@@ -55,7 +55,7 @@
                 android:visibility="gone"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/dateEd"
+                app:layout_constraintTop_toBottomOf="@id/etDate"
                 tools:visibility="visible">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
@@ -74,15 +74,31 @@
                         app:layout_constraintTop_toTopOf="parent"
                         tools:visibility="visible" />
 
-                    <com.google.android.material.bottomnavigation.BottomNavigationView
-                        android:id="@+id/AddDateNav"
+                    <TextView
+                        android:id="@+id/tvSaveDate"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
+                        android:padding="15dp"
+                        android:text="Save"
+                        android:textAlignment="center"
+                        android:textSize="15sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/tvCancelDate"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/datePicker" />
+
+                    <TextView
+                        android:id="@+id/tvCancelDate"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:padding="15dp"
+                        android:text="Cancel"
+                        android:textAlignment="center"
+                        android:textSize="15sp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/datePicker"
-                        app:menu="@menu/date_nav" />
+                        app:layout_constraintStart_toEndOf="@id/tvSaveDate"
+                        app:layout_constraintTop_toBottomOf="@+id/datePicker" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -157,16 +173,31 @@
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintTop_toTopOf="parent" />
-
-                            <com.google.android.material.bottomnavigation.BottomNavigationView
-                                android:id="@+id/EndTimeNav"
+                            <TextView
+                                android:id="@+id/tvSaveEndTime"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
+                                android:padding="15dp"
+                                android:text="Save"
+                                android:textAlignment="center"
+                                android:textSize="15sp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toStartOf="@id/tvCancelEndTime"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/addEndTimeEd2" />
+
+                            <TextView
+                                android:id="@+id/tvCancelEndTime"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:padding="15dp"
+                                android:text="Cancel"
+                                android:textAlignment="center"
+                                android:textSize="15sp"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toBottomOf="@+id/addEndTimeEd2"
-                                app:menu="@menu/end_time_nav" />
+                                app:layout_constraintStart_toEndOf="@id/tvSaveEndTime"
+                                app:layout_constraintTop_toBottomOf="@+id/addEndTimeEd2" />
                         </androidx.constraintlayout.widget.ConstraintLayout>
                     </FrameLayout>
 
@@ -198,16 +229,33 @@
                                 app:layout_constraintHorizontal_bias="0.496"
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintTop_toTopOf="parent" />
-
-                            <com.google.android.material.bottomnavigation.BottomNavigationView
-                                android:id="@+id/StartTimeNav"
+                            <TextView
+                                android:id="@+id/tvSaveStartTime"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
+                                android:padding="15dp"
+                                android:text="Save"
+                                android:textAlignment="center"
+                                android:textSize="15sp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toStartOf="@id/tvCancelStartTime"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/addStartTimeEd2" />
+
+                            <TextView
+                                android:id="@+id/tvCancelStartTime"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:padding="15dp"
+                                android:text="Cancel"
+                                android:textAlignment="center"
+                                android:textSize="15sp"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toBottomOf="@+id/addStartTimeEd2"
-                                app:menu="@menu/start_time_nav" />
+                                app:layout_constraintStart_toEndOf="@id/tvSaveStartTime"
+
+                                app:layout_constraintTop_toBottomOf="@+id/addStartTimeEd2" />
+
 
                         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -233,15 +281,34 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/frameStartEndTime" />
 
-            <com.google.android.material.bottomnavigation.BottomNavigationView
-                android:id="@+id/AddCancleNavigationBar"
+            <TextView
+                android:id="@+id/tvSaveTask"
+                android:background="?android:attr/selectableItemBackground"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:text="Add"
+                android:textAlignment="center"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/tvCancelTask"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edAddDescription" />
+
+            <TextView
+                android:id="@+id/tvCancelTask"
+                android:background="?android:attr/selectableItemBackground"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:text="Cancel"
+                android:textAlignment="center"
+                android:textSize="15sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/edAddDescription"
-                app:menu="@menu/bottom_new_task_menu" />
+                app:layout_constraintStart_toEndOf="@id/tvSaveTask"
+
+                app:layout_constraintTop_toBottomOf="@+id/edAddDescription" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>

@@ -5,6 +5,6 @@
         android:id="@+id/add_start_time"
         />
     <item
-        android:title="Cancle"
-        android:id="@+id/cancle_start_time" />
+        android:title="Cancel"
+        android:id="@+id/cancel_start_time" />
 </menu>

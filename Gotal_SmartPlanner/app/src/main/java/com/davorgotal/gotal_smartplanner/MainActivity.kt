@@ -4,7 +4,10 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Window
 import androidx.fragment.app.Fragment
+import com.davorgotal.gotal_smartplanner.calendar.CalendarFragment
 import com.davorgotal.gotal_smartplanner.databinding.ActivityMainBinding
+import com.davorgotal.gotal_smartplanner.diagram.DiagramFragment
+import com.davorgotal.gotal_smartplanner.task.TasksFragment
 import java.util.*
 
 class MainActivity : AppCompatActivity() {
